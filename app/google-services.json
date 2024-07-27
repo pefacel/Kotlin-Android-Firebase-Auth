@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "408646494865",
+    "project_id": "fir-login-5a9b0",
+    "storage_bucket": "fir-login-5a9b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408646494865:android:f16ad4562f9dc34d33ed30",
+        "android_client_info": {
+          "package_name": "com.pefacel.firebaselogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCAOBEsb1UpdoUxHVqzWR2SFMKfeqQ0U0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
