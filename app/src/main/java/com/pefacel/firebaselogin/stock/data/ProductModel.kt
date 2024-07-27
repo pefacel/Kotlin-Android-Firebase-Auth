@@ -1,5 +1,7 @@
 package com.pefacel.firebaselogin.stock.data
 
+import com.google.gson.annotations.SerializedName
+
 data class ProductModel(
     val category: String,
     val description: String,
@@ -7,7 +9,8 @@ data class ProductModel(
     val image: String,
     val price: Double,
     val rating: Rating,
-    val title: String
+    @SerializedName("title")
+    val name: String
 )
 
 data class Rating(

@@ -13,6 +13,7 @@ import com.pefacel.firebaselogin.R
 import com.pefacel.firebaselogin.auth.view.AuthViewModel
 import com.pefacel.firebaselogin.auth.view.register.RegisterActivity
 import com.pefacel.firebaselogin.databinding.ActivityLoginBinding
+import com.pefacel.firebaselogin.stock.view.stock.StockActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -60,11 +61,7 @@ class LoginActivity : AppCompatActivity() {
         authViewModel.user.observe(this, Observer { user ->
 
             if (user != null) {
-                println(user.uid)
-                println(user.email)
-                println(user.email)
-                println(user.isEmailVerified)
-
+                startActivity(Intent(this, StockActivity::class.java))
             }
 
 
