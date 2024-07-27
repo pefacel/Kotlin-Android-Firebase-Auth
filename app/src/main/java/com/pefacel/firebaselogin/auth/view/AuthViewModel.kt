@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseUser
-import com.pefacel.firebaselogin.auth.network.AuthService
+import com.pefacel.firebaselogin.auth.network.auth.AuthService
 import kotlinx.coroutines.launch
 
 class AuthViewModel : ViewModel() {

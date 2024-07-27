@@ -1,4 +1,4 @@
-package com.pefacel.firebaselogin.auth.network
+package com.pefacel.firebaselogin.auth.network.auth
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser

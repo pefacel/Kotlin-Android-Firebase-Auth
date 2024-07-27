@@ -13,9 +13,11 @@
         android:theme="@style/Theme.FirebaseLogin"
         tools:targetApi="31">
         <activity
+            android:name=".stock.view.stock.StockActivity"
+            android:exported="false" />
+        <activity
             android:name=".auth.view.register.RegisterActivity"
             android:exported="false" />
-
         <activity
             android:name=".auth.view.login.LoginActivity"
             android:exported="true">
