@@ -5,17 +5,41 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.pefacel.firebaselogin.R
+
+import com.pefacel.firebaselogin.databinding.FragmentProductsBinding
+import com.pefacel.firebaselogin.stock.view.stock.StockViewModel
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 
 
 class ProductsFragment : Fragment() {
+
+    private lateinit var binding: FragmentProductsBinding
+
+    private val stockViewModel: StockViewModel by activityViewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_products, container, false)
+        binding = FragmentProductsBinding.inflate(layoutInflater)
+
+        initUI()
+
+        return binding.root
+    }
+
+    private fun initUI() {
+
+        stockViewModel.products.observe(viewLifecycleOwner, Observer { products ->
+            binding.recyclerView.layoutManager =
+                LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            binding.recyclerView.adapter = ProductsAdapter(products)
+        })
+
+        stockViewModel.getProducts()
     }
 
 }

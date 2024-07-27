@@ -20,6 +20,11 @@ class StockViewModel : ViewModel() {
 
             val result = productService.getProducts()
 
+
+            println("Init StockViewModel")
+            println(result)
+
+
             if (result.isNullOrEmpty()) {
                 products.postValue(result)
 

@@ -43,11 +43,15 @@ android {
 dependencies {
 
     // Retrofit
-    implementation (libs.converter.gson)
-    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
 
     // ViewModel
-    implementation (libs.androidx.lifecycle.viewmodel)
+    implementation(libs.androidx.lifecycle.viewmodel)
+
+    // Fragments
+    implementation(libs.androidx.fragment.ktx)
+
 
     // Firebase
     implementation(platform(libs.firebase.bom))

@@ -9,11 +9,11 @@ data class ProductModel(
     val image: String,
     val price: Double,
     val rating: Rating,
-    @SerializedName("title")
-    val name: String
+    val title: String
 )
 
 data class Rating(
     val count: Int,
     val rate: Double
 )
+

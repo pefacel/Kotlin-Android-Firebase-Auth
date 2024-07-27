@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,14 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseLogin"
         tools:targetApi="31">
+
+
         <activity
-            android:name=".stock.view.stock.StockActivity"
+            android:name=".auth.view.login.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".auth.view.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".auth.view.login.LoginActivity"
+            android:name=".stock.view.stock.StockActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

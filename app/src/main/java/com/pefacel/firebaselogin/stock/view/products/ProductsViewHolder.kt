@@ -9,7 +9,7 @@ class ProductsViewHolder(private val binding: ItemProductsBinding) :
 
 
     fun render(product: ProductModel) {
-        binding.textViewName.text = product.name
+        binding.textViewName.text = product.title
 
     }
 }

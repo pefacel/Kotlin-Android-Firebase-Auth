@@ -22,7 +22,7 @@ class ProductsAdapter(
     }
 
     override fun onBindViewHolder(holder: ProductsViewHolder, position: Int) {
-        holder.render(products.get(position))
+        holder.render(products[position])
     }
 
 

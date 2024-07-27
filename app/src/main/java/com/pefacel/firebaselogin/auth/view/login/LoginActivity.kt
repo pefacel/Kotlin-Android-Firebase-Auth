@@ -26,9 +26,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+//        setContentView(binding.root)
 
-        startActivity(Intent(this, RegisterActivity::class.java))
+        startActivity(Intent(this, StockActivity::class.java))
 
 //        initUI()
 
