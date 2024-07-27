@@ -24,9 +24,9 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun initUI() {
-        authViewModel.registerWithEmailAndPassword(
-            "cmagrop@gmail.com",
-            "euclides1234"
-        )
+//        authViewModel.registerWithEmailAndPassword(
+//            "cmagrop@gmail.com",
+//            "euclides1234"
+//        )
     }
 }

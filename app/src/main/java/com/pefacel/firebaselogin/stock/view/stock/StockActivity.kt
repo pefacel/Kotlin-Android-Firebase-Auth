@@ -1,13 +1,9 @@
 package com.pefacel.firebaselogin.stock.view.stock
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
-import com.pefacel.firebaselogin.R
 import com.pefacel.firebaselogin.databinding.ActivityLoginBinding
 
 class StockActivity : AppCompatActivity() {
@@ -19,15 +15,12 @@ class StockActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         initUI()
-
     }
 
     private fun initUI() {
         stockViewModel.products.observe(this, Observer { products ->
             println(products)
-
         })
     }
 }

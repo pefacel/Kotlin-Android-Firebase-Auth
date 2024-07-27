@@ -18,10 +18,12 @@ class ProductsAdapter(
     }
 
     override fun getItemCount(): Int {
-        products.size
+        return products.size
     }
 
     override fun onBindViewHolder(holder: ProductsViewHolder, position: Int) {
         holder.render(products.get(position))
     }
+
+
 }
