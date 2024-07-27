@@ -13,7 +13,6 @@ import com.pefacel.firebaselogin.stock.view.products.ProductsFragment
 class StockActivity : AppCompatActivity() {
     private lateinit var binding: ActivityStockBinding
 
-    private val stockViewModel: StockViewModel by viewModels()
 
     private val productsFragment = ProductsFragment()
 
@@ -25,15 +24,7 @@ class StockActivity : AppCompatActivity() {
     }
 
     private fun initUI() {
-
-        println("INIT STOCK")
-
-
         setCurrentFragment(productsFragment)
-
-//        stockViewModel.products.observe(this, Observer { products ->
-//            println(products)
-//        })
     }
 
     private fun setCurrentFragment(fragment: Fragment) {

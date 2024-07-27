@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 
 import com.pefacel.firebaselogin.databinding.FragmentProductsBinding
 import com.pefacel.firebaselogin.stock.view.stock.StockViewModel
@@ -21,25 +22,31 @@ class ProductsFragment : Fragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentProductsBinding.inflate(layoutInflater)
-
         initUI()
-
         return binding.root
     }
 
     private fun initUI() {
+        initUIState()
+        initUIListener()
+    }
 
+    private fun initUIState() {
         stockViewModel.products.observe(viewLifecycleOwner, Observer { products ->
-            binding.recyclerView.layoutManager =
-                LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            binding.recyclerView.layoutManager = LinearLayoutManager(context)
             binding.recyclerView.adapter = ProductsAdapter(products)
         })
+        stockViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            binding.progressBar.isVisible = isLoading
+        }
+    }
 
+    private fun initUIListener() {
         stockViewModel.getProducts()
     }
+
 
 }

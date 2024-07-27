@@ -11,7 +11,7 @@ class StockViewModel : ViewModel() {
 
     private var productService = ProductService()
 
-    val products = MutableLiveData<List<ProductModel>>()
+    val products = MutableLiveData<List<ProductModel>>(emptyList())
     val isLoading = MutableLiveData<Boolean>(false)
 
     fun getProducts() {
@@ -20,14 +20,8 @@ class StockViewModel : ViewModel() {
 
             val result = productService.getProducts()
 
-
-            println("Init StockViewModel")
-            println(result)
-
-
-            if (result.isNullOrEmpty()) {
+            if (!result.isNullOrEmpty()) {
                 products.postValue(result)
-
             }
             isLoading.postValue(false)
 

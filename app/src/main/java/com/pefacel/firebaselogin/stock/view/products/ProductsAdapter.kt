@@ -7,13 +7,15 @@ import com.pefacel.firebaselogin.databinding.ItemProductsBinding
 import com.pefacel.firebaselogin.stock.data.ProductModel
 
 class ProductsAdapter(
-    private var products: List<ProductModel>
+    private val products: List<ProductModel>
 ) : RecyclerView.Adapter<ProductsViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductsViewHolder {
         val binding =
-            ItemProductsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemProductsBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false
+            )
         return ProductsViewHolder(binding)
     }
 
